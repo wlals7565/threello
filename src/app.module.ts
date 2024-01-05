@@ -5,6 +5,12 @@ import { ConfigModule } from '@nestjs/config'; // env 파일 쓸 때 쓰는 라�
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { configModuleValidationSchema } from './configs/env-validation.config';
 import { typeOrmModuleOptions } from './configs/database.config';
+import { AuthModule } from './auth/auth.module';
+import { UserModule } from './user/user.module';
+import { CardModule } from './card/card.module';
+import { BoardModule } from './board/board.module';
+import { ColumnModule } from './column/column.module';
+import { CommentModule } from './comment/comment.module';
 
 @Module({
   imports: [
@@ -13,6 +19,12 @@ import { typeOrmModuleOptions } from './configs/database.config';
       validationSchema: configModuleValidationSchema,
     }),
     TypeOrmModule.forRootAsync(typeOrmModuleOptions),
+    AuthModule,
+    UserModule,
+    CardModule,
+    BoardModule,
+    ColumnModule,
+    CommentModule,
   ], // 서버 전체에서 ConfigModule 쓸거야
   controllers: [AppController],
   providers: [AppService],
