@@ -1,73 +1,59 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Threello 프로젝트
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+- 트렐로와 같은 칸반보드 서비스 기능 구현
+- 내용 : 칸반보드 워크플로우 서비스 기능을 Nest.js와 TypeORM으로 구현합니다.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## 👋 Threello 팀 소개
 
-## Description
+- **Threello**는 3조인 저희 조 번호와 트렐로를 합친 이름입니다.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## 👨‍💻 팀원
 
-## Installation
+<table>
+  <tbody>
+    <tr>
+      <td align="center"><a href="https://github.com/choisooyoung-dev"><img src="https://avatars.githubusercontent.com/u/108859974?v=4" width="100px;" alt=""/><br /><sub><b> 팀장 : 최수영 </b></sub></a><br /></td>
+      <td align="center"><a href=https://github.com/smy1308"><img src="https://avatars.githubusercontent.com/u/146905861?v=4" width="100px;" alt=""/><br /><sub><b> 팀원 : 손민영 </b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/visitor17564"><img src="https://avatars.githubusercontent.com/u/146846913?v=4" width="100px;" alt=""/><br /><sub><b> 팀원 : 정창일 </b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/sangkwonlee1722"><img src="https://avatars.githubusercontent.com/u/147799382?v=4" width="100px;" alt=""/><br /><sub><b> 팀원 : 이상권 </b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/wlals7565"><img src="https://avatars.githubusercontent.com/u/117993640?v=4" width="100px;" alt=""/><br /><sub><b> 팀원 : 이정훈 </b></sub></a><br /></td>
+    </tr>
+  </tbody>
+</table>
 
-```bash
-$ npm install
-```
+## 👥 팀 구성원 및 역할
 
-## Running the app
+- **손민영**
 
-```bash
-# development
-$ npm run start
+  - 댓글 담당
 
-# watch mode
-$ npm run start:dev
+- **정창일**
 
-# production mode
-$ npm run start:prod
-```
+  - 와이어프레임 설계
+  - 리스트, 체크리스트 담당
 
-## Test
+- **이상권**
 
-```bash
-# unit tests
-$ npm run test
+  - 보드 담당
 
-# e2e tests
-$ npm run test:e2e
+- **이정훈**
 
-# test coverage
-$ npm run test:cov
-```
+  - 회원, 인증 담당
+  - ERD 설계
 
-## Support
+- **최수영**
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+  - 카드 담당
 
-## Stay in touch
+## ✅ 기술 스택
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+<!-- 프로젝트에 사용된 기술 스택을 나열 -->
 
-## License
+![Nest.js](https://img.shields.io/badge/nest.js-E0234E?style=for-the-badge&logo=Nest.js.js&logoColor=white)
+![TypeORM](https://img.shields.io/badge/typeorm-262627?style=for-the-badge&logo=typeorm&logoColor=white)
 
-Nest is [MIT licensed](LICENSE).
+## 🗃 ERD
+
+![Alt text](image.png)
+
+## ✅ 주요 기능

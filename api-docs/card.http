@@ -1,0 +1,224 @@
+@host = http://localhost:3000
+@Token = {{login.response.body.$.accessToken}}
+
+// user
+### 회원가입
+POST {{host}}/api/user/signup
+Content-Type: application/json
+
+{
+  "email": "test1@test.com",
+  "nick": "test1",
+  "password": "1q2w3e4r1234",
+  "passwordConfirm": "1q2w3e4r1234"
+}
+
+### 로그인
+# @name login
+POST {{host}}/api/user/signin
+Content-Type: application/json
+
+{
+  "email": "test1@test.com",
+  "password": "1q2w3e4r1234"
+}
+ 
+### 로그인2
+# @name login
+POST {{host}}/api/user/signin
+Content-Type: application/json
+
+{
+  "email": "test2@test.com",
+  "password": "1q2w3e4r1234"
+}
+
+
+### 내 정보 조회
+GET {{host}}/api/user/myinfo
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+// 보드
+### 보드 생성
+POST {{host}}/api/boards
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+{
+  "title": "test1",
+  "color": "blue"
+}
+
+### 보드 초대
+POST {{host}}/api/boards/invite/7
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+{
+  "email": "test2@test.com"
+}
+
+### 전체 보드 목록 조회
+GET {{host}}/api/boards
+Authorization: Bearer {{Token}}
+
+### 특정 보드 조회
+GET {{host}}/api/boards/1
+Authorization: Bearer {{Token}}
+
+### 보드 수정(오류)
+PATCH {{host}}/api/boards/3
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+{
+  "title": "수정된 보드 제목",
+  "color": "red"
+}
+
+### 보드 삭제
+DELETE {{host}}/boards/1
+
+// 리스트 테스트
+### 리스트등록
+POST {{host}}/api/7/list
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+{
+  "boards_id": 7,
+  "title": "Done"
+}
+
+### 리스트보기
+GET {{host}}/api/1/list/all/1
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+### 특정 리스트 보기
+GET {{host}}/api/1/list/1
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+### 특정 예약 타이틀수정
+PATCH {{host}}/api/list/1
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+{
+  "title": "Todos1"
+}
+
+### 특정 예약 순서수정
+PATCH {{host}}/api/list/1/5
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+### 특정 예약 삭제
+DELETE {{host}}/api/list/1
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+### 댓글 작성
+POST {{host}}/api/1/2/comments
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+{
+  "content": "더미 댓글 작성"
+}
+
+### 댓글 조회
+GET {{host}}/api/1/2/comments
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+
+### 댓글 수정
+PATCH {{host}}/api/1/2/comments/1
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+{
+  "content": "수정된 댓글"
+}
+
+### 댓글 삭제
+DELETE {{host}}/api/1/2/comments/6
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+###
+# GET ALL CARDS
+GET {{host}}/api/7/card/all/1
+Authorization: Bearer {{Token}}
+
+###
+# GET CARD
+GET {{host}}/api/7/card/
+Authorization: Bearer {{Token}}
+
+###
+# CREATE CARD
+POST {{host}}/api/7/card/create
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+{
+    "list_id":6, 
+    "title": "dummy card",
+    "content": "dummy card's content",
+    "dueDateValue": "2024-01-10",
+    "dueTimeValue": "20:00"
+}
+
+### 
+# UPDATE CARD
+PATCH  {{host}}/api/7/card/80
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+{
+	"deadline_status": 1
+}
+
+### 
+# UPDATE CARD ORDER (보드아이디/현재 카드아이디 값/옮기고 싶은 위치의 카드 order 값)
+PATCH {{host}}/api/7/card/85/3
+Authorization: Bearer {{Token}}
+
+### 
+# UPDATE CARD LIST ORDER (현재 카드아이디 값/옮기고 싶은 위치의 list 아이디 값/옮기고 싶은 위치의 카드 order 값)
+PATCH {{host}}/api/7/card/85/6/7/2
+Authorization: Bearer {{Token}}
+
+### 
+# DELETE CARD
+DELETE {{host}}/api/1/card/delete/59
+Authorization: Bearer {{Token}}
+  
+###
+# ALL WORKER
+GET {{host}}/api/7/card/worker/all
+Authorization: Bearer {{Token}}
+
+### 
+#CREATE WORKER
+POST {{host}}/api/7/card/80/worker/create
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+{
+  "userIds": [
+    { "id": 4 },
+    { "id": 5 }
+  ]
+}
+
+###
+# DELETE WORKER
+DELETE {{host}}/api/7/card/80/worker/remove/4
+Authorization: Bearer {{Token}}
+
+ 

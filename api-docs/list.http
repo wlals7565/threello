@@ -1,0 +1,249 @@
+@host = http://localhost:3000
+@Token = {{login.response.body.$.accessToken}}
+
+// user
+### 회원가입
+POST {{host}}/api/user/signup
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "nick": "test",
+  "password": "1q2w3e4r1234",
+  "passwordConfirm": "1q2w3e4r1234"
+}
+
+### 로그인
+# @name login
+POST {{host}}/api/user/signin
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "1q2w3e4r1234"
+}
+
+### 로그인2
+# @name login
+POST {{host}}/api/user/signin
+Content-Type: application/json
+
+{
+  "email": "test2@test.com",
+  "password": "1q2w3e4r1234"
+}
+
+
+### 내 정보 조회
+GET {{host}}/api/user/myinfo
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+// 보드
+### 보드 생성
+POST {{host}}/api/boards
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+{
+  "title": "새 보드",
+  "color": "blue"
+}
+
+### 보드 초대
+POST {{host}}/api/boards/invite/6
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+{
+  "email": "test2@test.com"
+}
+
+### 전체 보드 목록 조회
+GET {{host}}/api/boards
+Authorization: Bearer {{Token}}
+
+### 특정 보드 조회
+GET {{host}}/api/boards/1
+Authorization: Bearer {{Token}}
+
+### 보드 수정(오류)
+PATCH {{host}}/api/boards/3
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+{
+  "title": "수정된 보드 제목",
+  "color": "red"
+}
+
+### 보드 삭제
+DELETE {{host}}/boards/1
+
+// 리스트 테스트
+### 리스트등록
+POST {{host}}/api/3/list
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+{
+  "boards_id": 5,
+  "title": "Done"
+}
+
+### 리스트보기
+GET {{host}}/api/1/list/all/1
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+### 특정 리스트 보기
+GET {{host}}/api/1/list/1
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+### 특정 예약 타이틀수정
+PATCH {{host}}/api/list/1
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+{
+  "title": "Todos1"
+}
+
+### 특정 예약 순서수정
+PATCH {{host}}/api/list/1/5
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+### 특정 예약 삭제
+DELETE {{host}}/api/list/1
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+### 카드 생성
+POST {{host}}/api/1/card/create
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+{
+    "list_id":1, 
+    "title": "dummy card",
+    "content": "dummy card's content",
+    "dueDateValue": "2024-01-10",
+    "dueTimeValue": "20:00"
+}
+
+### 댓글 작성
+POST {{host}}/api/1/2/comments
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+{
+  "content": "더미 댓글 작성"
+}
+
+### 댓글 조회
+GET {{host}}/api/1/2/comments
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+
+### 댓글 수정
+PATCH {{host}}/api/1/2/comments/1
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+{
+  "content": "수정된 댓글"
+}
+
+### 댓글 삭제
+DELETE {{host}}/api/1/2/comments/6
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+// 체크리스트
+### 리스트등록
+POST {{host}}/api/1/checklist
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+{
+  "card_id": 6,
+  "title": "test"
+}
+
+### 리스트보기
+GET {{host}}/api/1/checklist/all/5
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+### 특정 리스트 보기
+GET {{host}}/api/1/checklist/1
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+### 특정 예약 타이틀수정
+PATCH {{host}}/api/1/checklist/1
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+{
+  "title": "test22"
+}
+
+### 특정 예약 순서수정
+PATCH {{host}}/api/1/checklist/1/1
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+### 특정 예약 삭제
+DELETE {{host}}/api/1/checklist/1
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+// 체크아이템
+### 등록
+POST {{host}}/api/1/check-item
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+{
+  "checklist_id": 3,
+  "content": "test"
+}
+
+### 리스트보기
+GET {{host}}/api/1/check-item/all/2
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+### 특정 리스트 보기
+GET {{host}}/api/1/check-item/1
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+### 특정 예약 타이틀수정
+PATCH {{host}}/api/1/check-item/1
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+{
+  "content": "test22",
+  "is_done": true
+}
+
+### 특정 예약 순서수정
+PATCH {{host}}/api/1/check-item/35/3
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+### 특정 예약 삭제
+DELETE {{host}}/api/1/check-item/35
+Authorization: Bearer {{Token}}
+Content-Type: application/json
+
+### 옆집이사
+PATCH {{host}}/api/1/check-item/41/2/1
+Authorization: Bearer {{Token}}
+Content-Type: application/json

@@ -1,0 +1,38 @@
+@host = http://localhost:3000/api
+
+### 로그인
+# @name login
+POST http://localhost:3000/api/user/signin
+Content-Type: application/json
+
+{
+  "email": "test33@email.com",
+  "password": "test3333"
+}
+
+###  보드 생성
+POST {{host}}/boards
+Content-Type: application/json
+
+{
+  "title": "새 보드",
+  "color": "blue"
+} 
+
+### 전체 보드 목록 조회
+GET {{host}}/boards
+
+### 특정 보드 조회
+GET {{host}}/boards/1
+
+### 보드 수정
+PATCH {{host}}/boards/1
+Content-Type: application/json
+
+{
+  "title": "수정된 보드 제목",
+  "color": "red" // 'color' 필드는 선택적입니다.
+}
+
+### 보드 삭제
+DELETE {{host}}/boards/1
