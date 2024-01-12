@@ -56,4 +56,3 @@
 
 ![Alt text](image.png)
 
-## ✅ 주요 기능
