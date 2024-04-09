@@ -46,11 +46,13 @@
 ## ✅ 기술 스택
 
 <!-- 프로젝트에 사용된 기술 스택을 나열 -->
-
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white)
 ![Nest.js](https://img.shields.io/badge/nest.js-E0234E?style=for-the-badge&logo=Nest.js.js&logoColor=white)
 ![TypeORM](https://img.shields.io/badge/typeorm-262627?style=for-the-badge&logo=typeorm&logoColor=white)
+![Swagger](https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white)
 
 ## 🗃 ERD
 
-![Alt text](image.png)
+![ERD](image.png)
 
