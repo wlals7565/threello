@@ -56,3 +56,56 @@
 
 ![ERD](image.png)
 
+# 프로젝트 과정 소개
+<table>
+<thead>
+<tr>
+<th align="left"><strong>기간</strong></th>
+<th align="left"><strong>작업</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">ERD설계</td>
+<td align="left">
+  <ul>
+    <li>
+      칸반 보드 서비스의 ERD를 설계하기 위해 직접 Trello를 써보면서 필요한 데이터들을 정리
+    </li>
+    <li>
+      이후 검토를 거쳐 정말 필요한 필드로 구성된 테이블 구조 설정
+    </li>
+  </ul>
+  </td>
+</tr>
+  <tr>
+<td align="left">API 설계 및 제작</td>
+<td align="left">
+  <ul>
+    <li>
+      제작된 ERD를 기준으로 필요한 API설계
+    </li>
+    <li>
+      API 설계 과정에서 사용자들이 서로의 칸반 보드를 건들지 못하게 해야할 필요성을 느낌
+    </li>
+    <li>
+      이에 따라 JWT토큰을 이용하여 유저가 인증되어야 칸반 보드를 조작할 수 있게 인증 기능을 구현
+    </li>
+  </ul>
+  </td>
+</tr>
+   <tr>
+<td align="left">API 검증을 위한 Swagger 문서 작성</td>
+<td align="left">
+  <ul>
+    <li>
+      백엔드만 존재하다 보니 이를 검증할 수 있는 도구가 필요함을 느낌.
+    </li>
+    <li>
+      이에 따라 Swagger를 이용하여 API를 문서화하고 테스트 함.
+    </li>
+  </ul>
+  </td>
+</tr>
+</tbody>
+</table>
