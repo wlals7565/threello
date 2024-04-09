@@ -109,3 +109,13 @@
 </tr>
 </tbody>
 </table>
+
+# 📽️프로젝트 영상
+- [영상 링크](https://www.youtube.com/watch?v=2e6tH8IUv3I)
+
+# 프로젝트 회고
+- NestJS는 뼈대를 잡아주기 때문에 어떻게 만들어야 할지에 대한 고민을 할 필요가 없었다.
+- 그러나 NestJS를 배웠을 때에 해당되는 이야기고 API는 간단했기 때문에 쉬웠지 추가적인 기능을 요구하였다면 어려웠을 것이다.
+- NestJS가 어떻게 작동하는지에 대한 공부가 필요한 것을 느꼈다.
+- NestJS는 TypeScript로 작성할 수 있는데 이를 통해 코딩 실수가 줄었다. 또한 Swagger가 TypeScript를 인식해 어느 수준까지는 자동으로 Swagger문서를 만들어 줘서 좋았다.
+- 그러나 TypeScript도 공부를 따로 할 필요성을 느꼈다.
